@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTG Perfumes</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="#" class="logo">GTG</a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero">Home</a>
+        <a href="#product">Shop</a>
+        <a href="#stats">Elements</a>
+        <a href="#comparison">About Us</a>
+        <a href="#comparison">Blog</a>
+        <a href="#footer">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="search-btn" aria-label="Search">🔍</button>
+        <a href="#product" class="btn btn-primary desktop-shop-btn">Shop Now</a>
+
+        <button class="hamburger" id="hamburger" aria-label="Open Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span>🏅</span>
+        <p>Awarded the best perfume in the world</p>
+      </div>
+
+      <h1>Live your best life.</h1>
+
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <h2>10x</h2>
+          <p>power</p>
+        </div>
+        <div class="hero-stat">
+          <h2>9</h2>
+          <p>ingredients</p>
+        </div>
+        <div class="hero-stat">
+          <h2>20K+</h2>
+          <p>happy customers</p>
+        </div>
+      </div>
+
+      <a href="#product" class="btn btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- =========================
+       PRODUCT SECTION
+  ========================== -->
+  <section class="product-section" id="product">
+    <div class="container product-grid">
+
+      <!-- LEFT: IMAGE GALLERY -->
+      <div class="product-gallery">
+        <div class="main-gallery">
+          <button class="gallery-arrow left" id="prevBtn" aria-label="Previous Image">&#10094;</button>
+          <img id="mainImage" src="assets/images/product-1.jpg" alt="GTG Perfume Main Product" loading="lazy" />
+          <button class="gallery-arrow right" id="nextBtn" aria-label="Next Image">&#10095;</button>
+
+          <div class="gallery-dots" id="galleryDots"></div>
+        </div>
+
+        <div class="gallery-thumbs">
+          <img src="assets/images/product-1.jpg" class="thumb active-thumb" data-index="0" alt="Product Thumbnail 1" loading="lazy" />
+          <img src="assets/images/product-2.jpg" class="thumb" data-index="1" alt="Product Thumbnail 2" loading="lazy" />
+          <img src="assets/images/product-3.jpg" class="thumb" data-index="2" alt="Product Thumbnail 3" loading="lazy" />
+          <img src="assets/images/product-4.jpg" class="thumb" data-index="3" alt="Product Thumbnail 4" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- RIGHT: PRODUCT DETAILS -->
+      <div class="product-details">
+        <div class="product-heading">
+          <h2>GTG Perfumes</h2>
+          <div class="rating-row">
+            <span class="stars">★★★★★</span>
+            <span>4.7 (999+ reviews)</span>
+          </div>
+        </div>
+
+        <p class="product-description">
+          Choose your fragrance and preferred purchase plan. Designed for those who want premium fragrance with flexibility.
+        </p>
+
+        <!-- FRAGRANCE OPTIONS -->
+        <div class="option-group">
+          <h3>Choose Fragrance</h3>
+          <div class="fragrance-grid">
+            <label class="fragrance-card">
+              <input type="radio" name="fragrance" value="original" checked />
+              <span>Original</span>
+            </label>
+
+            <label class="fragrance-card">
+              <input type="radio" name="fragrance" value="lily" />
+              <span>Lily</span>
+            </label>
+
+            <label class="fragrance-card">
+              <input type="radio" name="fragrance" value="rose" />
+              <span>Rose</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- PURCHASE TYPE -->
+        <div class="option-group">
+          <h3>Choose Purchase Type</h3>
+
+          <!-- ONE TIME -->
+          <label class="purchase-card">
+            <input type="radio" name="purchase" value="one-time" checked />
+            <div class="purchase-content">
+              <div class="purchase-left">
+                <h4>One Time Purchase</h4>
+                <p>No subscription. Buy once.</p>
+              </div>
+              <div class="purchase-right">
+                <span class="price-new">$129.99</span>
+                <span class="price-old">$146</span>
+              </div>
+            </div>
+          </label>
+
+          <!-- SINGLE SUB -->
+          <label class="purchase-card">
+            <input type="radio" name="purchase" value="single-subscription" />
+            <div class="purchase-content">
+              <div class="purchase-left">
+                <h4>Single Subscription</h4>
+                <p>1 bottle shipped monthly</p>
+              </div>
+              <div class="purchase-right">
+                <span class="price-new">$99.99</span>
+                <span class="price-old">$146</span>
+              </div>
+            </div>
+          </label>
+
+          <div class="expandable-box" id="singleSubscriptionBox">
+            <ul>
+              <li>1 bottle shipped monthly</li>
+              <li>Free sampler for original, lily and rose fragrances</li>
+              <li>50% OFF shipping</li>
+              <li>Pause or cancel anytime after 3 months minimum</li>
+              <li>28 day money back guarantee*</li>
+            </ul>
+          </div>
+
+          <!-- DOUBLE SUB -->
+          <label class="purchase-card featured-card">
+            <span class="most-popular">Most Popular</span>
+            <input type="radio" name="purchase" value="double-subscription" />
+            <div class="purchase-content">
+              <div class="purchase-left">
+                <h4>Double Subscription</h4>
+                <p>2 bottles shipped monthly</p>
+              </div>
+              <div class="purchase-right">
+                <span class="price-new">$169.99</span>
+                <span class="price-old">$199</span>
+              </div>
+            </div>
+          </label>
+
+          <div class="expandable-box" id="doubleSubscriptionBox">
+            <div class="included-section">
+              <h4>What’s Included:</h4>
+              <div class="included-grid">
+                <div class="included-card">Every 30 Days</div>
+                <div class="included-card">2 Bottles</div>
+                <div class="included-card">Free Sampler</div>
+              </div>
+            </div>
+
+            <ul>
+              <li>2 bottles shipped monthly</li>
+              <li>Free sampler for original, lily and rose fragrances</li>
+              <li>50% OFF shipping</li>
+              <li>Pause or cancel anytime after 3 months minimum</li>
+              <li>28 day money back guarantee*</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="cta-block">
+          <a href="#" class="btn btn-primary add-cart-btn" id="addToCartLink">Add to Cart</a>
+          <p class="selection-preview" id="selectionPreview">Selected: original + one-time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       PERCENTAGE / STATS SECTION
+  ========================== -->
+  <section class="stats-section" id="stats">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-subtitle">Why people choose GTG</p>
+        <h2>Performance that speaks for itself</h2>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3 class="counter" data-target="84">0</h3>
+          <p>Feel more confident</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="counter" data-target="78">0</h3>
+          <p>Notice long-lasting fragrance</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="counter" data-target="89">0</h3>
+          <p>Would recommend to friends</p>
+        </div>
+
+        <div class="stat-card">
+          <h3 class="counter" data-target="92">0</h3>
+          <p>Love the premium packaging</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       TABLE SECTION
+  ========================== -->
+  <section class="comparison-section" id="comparison">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-subtitle">Compare Options</p>
+        <h2>Choose what suits you best</h2>
+      </div>
+
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>One Time</th>
+              <th>Single Subscription</th>
+              <th>Double Subscription</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td>$129.99</td>
+              <td>$99.99</td>
+              <td>$169.99</td>
+            </tr>
+            <tr>
+              <td>Delivery</td>
+              <td>One Time</td>
+              <td>Monthly</td>
+              <td>Monthly</td>
+            </tr>
+            <tr>
+              <td>Shipping Discount</td>
+              <td>No</td>
+              <td>50% OFF</td>
+              <td>50% OFF</td>
+            </tr>
+            <tr>
+              <td>Free Sampler</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Cancel Anytime</td>
+              <td>Not Applicable</td>
+              <td>After 3 months</td>
+              <td>After 3 months</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer" id="footer">
+    <div class="container footer-content">
+      <h3>GTG</h3>
+      <p>Premium fragrances crafted for your lifestyle.</p>
+      <small>&copy; 2026 GTG Perfumes. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
